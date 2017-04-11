@@ -1,0 +1,7 @@
+<% provide :title, t(".title") %>
+<h1><%= t ".welcome" %></h1>
+<p>
+  <%= raw t(".message",
+    url_home: link_to(t(".url_home"), t(".url_home_path"))) %>
+</p>
+
