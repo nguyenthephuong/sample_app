@@ -20,7 +20,7 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  title_pages: " | Ruby on Rails Tutorial Sample App"
+  base_title: "Ruby on Rails Tutorial Sample App"
   static_pages:
     url_home: &url_home "Ruby on Rails Tutorial"
     url_home_path: &url_home_path "http://www.railstutorial.org/"
