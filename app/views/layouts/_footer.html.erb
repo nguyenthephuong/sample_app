@@ -1,0 +1,14 @@
+<footer class="footer">
+  <small>
+    <%= raw t(".message",
+      url_home: link_to(t(".url_home"), "http://www.railstutorial.org/"),
+      url_author: link_to(t(".url_author"), "http://www.michaelhartl.com/")) %>
+  </small>
+  <nav>
+    <ul>
+      <li><%= link_to t("static_pages.about.title"), about_path %></li>
+      <li><%= link_to t("static_pages.contact.title"), contact_path %></li>
+      <li><%= link_to t(".url_new"), "http://news.railstutorial.org/" %></li>
+    </ul>
+  </nav>
+</footer>

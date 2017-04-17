@@ -20,35 +20,42 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  base_title: "Ruby on Rails Tutorial Sample App"
-  static_pages:
-    url_home: &url_home "Ruby on Rails Tutorial"
-    url_home_path: &url_home_path "http://www.railstutorial.org/"
-    url_help: &url_help "Rails Tutorial help section"
-    url_help_path: &url_help_path "http://www.railstutorial.org/help"
-    url_book: &url_book "Ruby on Rails Tutorial Book"
-    url_book_path: &url_book_path "http://www.railstutorial.org/book"
-    url_screencast: &url_screencast "screencast series"
-    url_screencast_path:
-      &url_screencast_path "http://screencasts.railstutorial.org/"
-    url_contact: &url_contact "contact page"
-    url_contact_path: &url_contact_path "http://www.railstutorial.org/contact"
+  url_home: &url_home "Ruby on Rails Tutorial"
+  url_help: &url_help "Rails Tutorial help section"
+  url_book: &url_book "Ruby on Rails Tutorial Book"
+  url_screencast: &url_screencast "screencast series"
+  url_contact: &url_contact "contact page"
 
+  layouts:
+    application:
+      base_title: "Ruby on Rails Tutorial Sample App"
+
+    header:
+      logo: "sample app"
+      login: "Log in"
+
+    footer:
+      message: "The %{url_home} by %{url_author}"
+      url_home: *url_home
+      url_author: "Michael Hartl"
+      url_new: "New"
+
+  static_pages:
     home:
       title: "Home"
       welcome: "Welcome to the Sample App"
       message: "This is the home page for the %{url_home} sample application."
       url_home: *url_home
-      url_home_path: *url_home_path
+      sign_up: "Sign up now!"
+      rails_image: "rails.png"
+      rails_image_alt: "Rails logo"
 
     help:
       title: "Help"
       message: "Get help on the Ruby on Rails Tutorial at the %{url_help}.
         To get help on this sample app, see the %{url_book}."
       url_help: *url_help
-      url_help_path: *url_help_path
       url_book: *url_book
-      url_book_path: *url_book_path
 
     about:
       title: "About"
@@ -56,15 +63,16 @@ en:
         %{url_screencast} to teach web development with %{url_home}.
         This is the sample application for the tutorial."
       url_home: *url_home
-      url_home_path: *url_home_path
       url_book: *url_book
-      url_book_path: *url_book_path
       url_screencast: "screencast series"
-      url_screencast_path: "http://screencasts.railstutorial.org/"
 
     contact:
       title: "Contact"
       message: "Contact the Ruby on Rails Tutorial about the
         sample app at the %{url_contact}."
       url_contact: *url_contact
-      url_contact_path: *url_contact_path
+
+  users:
+    new:
+      title: "Sign up"
+      message: "This will be a signup page for new users"

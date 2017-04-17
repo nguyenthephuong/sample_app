@@ -2,8 +2,9 @@
 <h1><%= t ".title" %></h1>
 <p>
   <%= raw t(".message",
-    url_home: link_to(t(".url_home"), t(".url_home_path")),
-    url_book: link_to(t(".url_book"), t(".url_book_path")),
-    url_screencast: link_to(t(".url_screencast"), t(".url_screencast_path")),
-    url_home: link_to(t(".url_home"), t(".url_home_path"))) %>
+    url_home: link_to(t(".url_home"), "http://www.railstutorial.org/"),
+    url_book: link_to(t(".url_book"), "http://www.railstutorial.org/book"),
+    url_screencast: link_to(t(".url_screencast"),
+      "http://screencasts.railstutorial.org/"),
+    url_home: link_to(t(".url_home"), "http://www.railstutorial.org/")) %>
 </p>

@@ -1,6 +1,6 @@
 <% provide :title, t(".title") %>
 <h1><%= t ".title" %></h1>
 <p>
-  <%= raw t(".message",
-    url_contact: link_to(t(".url_contact"), t(".url_contact_path"))) %>
+  <%= raw t(".message", url_contact: link_to(t(".url_contact"),
+    "http://www.railstutorial.org/contact")) %>
 </p>
