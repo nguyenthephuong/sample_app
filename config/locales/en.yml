@@ -76,3 +76,13 @@ en:
     new:
       title: "Sign up"
       message: "This will be a signup page for new users"
+      confirm: "Confirmation"
+      submit: "Create my account"
+
+    show:
+      danger: "User was not found"
+
+  shared:
+    error_messages:
+      form_contain: "The form contains "
+      error: "error"
