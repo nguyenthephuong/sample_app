@@ -25,6 +25,8 @@ en:
   url_book: &url_book "Ruby on Rails Tutorial Book"
   url_screencast: &url_screencast "screencast series"
   url_contact: &url_contact "contact page"
+  welcome: &welcome "Welcome to the Sample App"
+  danger_login: "Invalid email/password combination"
 
   layouts:
     application:
@@ -33,6 +35,9 @@ en:
     header:
       logo: "sample app"
       login: "Log in"
+      profile: "Profile"
+      setting: "Settings"
+      logout: "Log out"
 
     footer:
       message: "The %{url_home} by %{url_author}"
@@ -43,7 +48,7 @@ en:
   static_pages:
     home:
       title: "Home"
-      welcome: "Welcome to the Sample App"
+      welcome: *welcome
       message: "This is the home page for the %{url_home} sample application."
       url_home: *url_home
       sign_up: "Sign up now!"
@@ -86,3 +91,9 @@ en:
     error_messages:
       form_contain: "The form contains "
       error: "error"
+
+  sessions:
+    new:
+      title: "Log in"
+      new_user: "New user? "
+      sign_up: "Sign up now!"
