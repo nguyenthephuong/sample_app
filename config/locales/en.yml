@@ -22,6 +22,12 @@
 en:
   session_danger: "Invalid email/password combination"
   users_dander: "Please log in."
+  active_success: "Account activated!"
+  active_false: "Invalid activation link"
+  check_to_activate: "Please check your email to activate your account."
+  message_active: "Account not activated. Check your email for the activation
+    link."
+  account_activation: "Account Activation"
 
   layouts:
     application:
@@ -94,6 +100,7 @@ en:
       danger: "User was not found"
       confirm: "Confirmation"
       submit: "Save changes"
+      change: "change"
 
     update:
       success: "Profile updated"
@@ -116,3 +123,10 @@ en:
       new_user: "New user? "
       sign_up: "Sign up now!"
       remember_me: "Remember me"
+
+  user_mailer:
+    account_activation:
+      title: "Sample App"
+      message: "Welcome to the Sample App! Click on the link below to activate
+        your account: "
+      activate: "Activate"

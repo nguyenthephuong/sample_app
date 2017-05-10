@@ -1,13 +1,12 @@
 class UsersController < ApplicationController
   before_action :reject_if_logged_in, only: [:new, :create]
-  before_action :logged_in_user, only: [:index, :edit, :update, :destroy]
-  before_action :find_user, only: [:show, :edit, :update, :destroy,
-    :correct_user]
+  before_action :logged_in_user, only: [:index, :edit, :update]
+  before_action :find_user, except: [:index, :new, :create]
   before_action :correct_user, only: [:edit, :update]
   before_action :admin_user, only: :destroy
 
   def index
-    @users = User.paginate page: params[:page], per_page: 8
+    @users = User.activated.paginate page: params[:page], per_page: 8
   end
 
   def new
@@ -17,15 +16,16 @@ class UsersController < ApplicationController
   def create
     @user = User.new user_params
     if @user.save
-      log_in @user
-      flash[:success] = t ".success"
-      redirect_to @user
+      @user.send_activation_email
+      flash[:info] = t "check_to_activate"
+      redirect_to root_path
     else
       render :new
     end
   end
 
   def show
+    redirect_to root_url and return unless @user.activated?
   end
 
   def edit
