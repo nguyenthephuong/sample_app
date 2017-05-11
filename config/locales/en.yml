@@ -28,6 +28,15 @@ en:
   message_active: "Account not activated. Check your email for the activation
     link."
   account_activation: "Account Activation"
+  password_reset: "Password reset"
+  message_reset: "Email sent with password reset instructions"
+  message_reset_error: "Email address not found"
+  password_blank: "can't be empty"
+  reset_success: "Password has been reset."
+  check_expired: "Password reset has expired."
+  create_post_success: "Micropost created!"
+  delete_success: "Micropost deleted"
+  less_5mb: "should be less than 5MB"
 
   layouts:
     application:
@@ -55,6 +64,7 @@ en:
       sign_up: "Sign up now!"
       rails_image: "rails.png"
       rails_image_alt: "Rails logo"
+      feed: "Micropost Feed"
 
     help:
       title: "Help"
@@ -93,6 +103,7 @@ en:
 
     show:
       danger: "User was not found"
+      microposts: "Microposts"
 
     edit:
       title: "Edit user"
@@ -117,12 +128,22 @@ en:
       form_contain: "The form contains "
       error: "error"
 
+    micropost_form:
+      placeholder: "Compose new micropost..."
+      post: "Post"
+      alert_max: "Maximum file size is 5MB. Please choose a smaller file."
+
+    user_info:
+      view_profile: "view my profile"
+      micropost: "micropost"
+
   sessions:
     new:
       title: "Log in"
       new_user: "New user? "
       sign_up: "Sign up now!"
       remember_me: "Remember me"
+      forgot_password: "(Forgot password)"
 
   user_mailer:
     account_activation:
@@ -130,3 +151,28 @@ en:
       message: "Welcome to the Sample App! Click on the link below to activate
         your account: "
       activate: "Activate"
+
+    password_reset:
+      title: "Password reset"
+      message: "To reset your password click the link below:"
+      reset: "Reset password"
+      note1: "This link will expire in two hours."
+      note2: "If you did not request your password to be reset, please ignore
+        this email and your password will stay as it is."
+
+  password_resets:
+    new:
+      title: "Forgot password"
+      submit: "Submit"
+
+    edit:
+      title: "Reset password"
+      submit: "Update password"
+      confirm: "Confirmation"
+
+  microposts:
+    micropost:
+      posted: "Posted"
+      ago: "ago"
+      delete: "delete"
+      confirm: "You sure?"
