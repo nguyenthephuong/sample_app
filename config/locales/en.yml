@@ -28,6 +28,12 @@ en:
   message_active: "Account not activated. Check your email for the activation
     link."
   account_activation: "Account Activation"
+  password_reset: "Password reset"
+  message_reset: "Email sent with password reset instructions"
+  message_reset_error: "Email address not found"
+  password_blank: "can't be empty"
+  reset_success: "Password has been reset."
+  check_expired: "Password reset has expired."
 
   layouts:
     application:
@@ -123,6 +129,7 @@ en:
       new_user: "New user? "
       sign_up: "Sign up now!"
       remember_me: "Remember me"
+      forgot_password: "(Forgot password)"
 
   user_mailer:
     account_activation:
@@ -130,3 +137,20 @@ en:
       message: "Welcome to the Sample App! Click on the link below to activate
         your account: "
       activate: "Activate"
+
+    password_reset:
+      title: "Password reset"
+      message: "To reset your password click the link below:"
+      reset: "Reset password"
+      note1: "This link will expire in two hours."
+      note2: "If you did not request your password to be reset, please ignore
+        this email and your password will stay as it is."
+
+  password_resets:
+    new:
+      title: "Forgot password"
+      submit: "Submit"
+
+    edit:
+      title: "Reset password"
+      submit: "Update password"
