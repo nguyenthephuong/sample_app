@@ -1,12 +1,25 @@
 <% provide :title, t(".title") %>
-<div class="center jumbotron">
-  <h1><%= t ".welcome" %></h1>
-  <h2>
-    <%= raw t(".message",
-      url_home: link_to(t(".url_home"), "http://www.railstutorial.org/")) %>
-  </h2>
-  <%= link_to t(".sign_up"), signup_path, class: "btn btn-lg btn-primary" %>
-</div>
-<%= link_to image_tag(t(".rails_image"), alt: t(".rails_image_alt")),
-  "http://www.railstutorial.org/" %>
+<% if logged_in? %>
+  <div class="row">
+    <aside class="col-md-4">
+      <section class="user_info">
+        <%= render "shared/user_info" %>
+      </section>
+      <section class="micropost_form">
+        <%= render "shared/micropost_form" %>
+      </section>
+    </aside>
+  </div>
+<% else %>
+  <div class="center jumbotron">
+    <h1><%= t ".welcome" %></h1>
+    <h2>
+      <%= raw t(".message",
+        url_home: link_to(t(".url_home"), "http://www.railstutorial.org/")) %>
+    </h2>
+    <%= link_to t(".sign_up"), signup_path, class: "btn btn-lg btn-primary" %>
+  </div>
+  <%= link_to image_tag(t(".rails_image"), alt: t(".rails_image_alt")),
+    "http://www.railstutorial.org/" %>
+<% end %>
 
