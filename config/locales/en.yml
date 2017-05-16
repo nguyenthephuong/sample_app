@@ -123,6 +123,16 @@ en:
       confirm: "You sure?"
       delete: "delete"
 
+    follow:
+      follow: "Follow"
+
+    unfollow:
+      unfollow: "Unfollow"
+
+    show_follow:
+      view_profile: "view my profile"
+      microposts: "Microposts:"
+
   shared:
     error_messages:
       form_contain: "The form contains "
@@ -136,6 +146,10 @@ en:
     user_info:
       view_profile: "view my profile"
       micropost: "micropost"
+
+    stats:
+      following: "following"
+      followers: "followers"
 
   sessions:
     new:

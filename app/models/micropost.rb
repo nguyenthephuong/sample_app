@@ -1,7 +1,9 @@
 class Micropost < ApplicationRecord
   belongs_to :user
 
+  scope :feeds_following, ->user{where user_id: user.following_ids << user.id}
   scope :orders, ->{order created_at: :desc}
+
   validates :user, presence: true
   validates :content, presence: true, length: {maximum: 140}
 
